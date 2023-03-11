@@ -1,0 +1,85 @@
+20230311
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: /opt/homebrew/Cellar/maven/3.8.6/libexec
+Java version: 19, vendor: Homebrew, runtime: /opt/homebrew/Cellar/openjdk/19/libexec/openjdk.jdk/Contents/Home
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "mac os x", version: "13.0.1", arch: "aarch64", family: "mac"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.org:groceries >--------------------------
+[INFO] Building groceries-app 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.7.4:run (default-cli) > test-compile @ groceries >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ groceries ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ groceries ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ groceries ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/vamsiarisetti/MyDisk/MyCode/groceries-app/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ groceries ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.7.4:run (default-cli) < test-compile @ groceries <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.7.4:run (default-cli) @ groceries ---
+[INFO] Attaching agents: []
+18:02:05.306 [Thread-0] DEBUG org.springframework.boot.devtools.restart.classloader.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4a12ca8d
+2023-03-11 18:02:05.916  INFO 8362 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.4)
+
+2023-03-11 18:02:06.212  INFO 8362 --- [  restartedMain] c.org.groceries.GroceriesAppApplication  : The following 1 profile is active: "local"
+2023-03-11 18:02:06.935  INFO 8362 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-11 18:02:06.988  INFO 8362 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+2023-03-11 18:02:07.248  INFO 8362 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b741003d-1c33-3207-b92b-b1f4b76bea52
+2023-03-11 18:02:07.996  INFO 8362 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 443 (https)
+2023-03-11 18:02:08.018  INFO 8362 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-11 18:02:08.019  INFO 8362 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-03-11 18:02:08.137  INFO 8362 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-11 18:02:08.138  INFO 8362 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1911 ms
+2023-03-11 18:02:08.381  INFO 8362 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-11 18:02:08.434  INFO 8362 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-03-11 18:02:08.583  INFO 8362 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-11 18:02:08.680  INFO 8362 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-11 18:02:09.051  INFO 8362 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-11 18:02:09.069  INFO 8362 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: alter table grocery_list drop index uk_prodname
+Hibernate: alter table grocery_list add constraint uk_prodname unique (product_name)
+2023-03-11 18:02:09.692  INFO 8362 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-11 18:02:09.701  INFO 8362 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-11 18:02:10.375  WARN 8362 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-11 18:02:10.735  INFO 8362 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-11 18:02:11.245  INFO 8362 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 443 (https) with context path ''
+2023-03-11 18:02:11.485  INFO 8362 --- [  restartedMain] c.org.groceries.GroceriesAppApplication  : Started GroceriesAppApplication in 6.165 seconds (JVM running for 6.708)
+Hibernate: SELECT DISTINCT user_id FROM grocery_list
+Hibernate: SELECT * FROM grocery_list WHERE user_id IN ('common', ?)
+Hibernate: SELECT * FROM grocery_list WHERE user_id IN ('common', ?)
+Hibernate: SELECT * FROM grocery_list WHERE user_id IN ('common', ?)
+grocery Lists : [grocery_lists/groceryList_861760458_2023-03-11.pdf, grocery_lists/groceryList_2005698367_2023-03-11.pdf, grocery_lists/groceryList_1663430855_2023-03-11.pdf]
+2023-03-11 18:03:02.435  INFO 8362 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-11 18:03:02.439  INFO 8362 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-11 18:03:02.445  INFO 8362 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:01 min
+[INFO] Finished at: 2023-03-11T18:03:03+05:30
+[INFO] ------------------------------------------------------------------------
+Run Successful...

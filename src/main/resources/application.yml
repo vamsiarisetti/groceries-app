@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    #    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    password: India@123
+    url: jdbc:mysql://localhost:3306/grocery_utilities
+    #    url: jdbc:mysql://mysqldb:3306/catalog
+    username: root
+    password: India@123
+    flyway:
+      url: jdbc:mysql://localhost:3306/mysql
+      schemas: grocery_utilities
+      user: root
+      password: India@123
+      baselineOnMigrate: true
+      validateOnMigrate: false
+      locations: classpath:src/main/resources/db/migration
+  jpa:
+    hibernate:
+      console:
+        enabled: true
+      ddl-auto: update
+      format_sql: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: local
+server:
+  port: 443
+  ssl:
+    key-store: keystore.p12
+    key-store-password: changeit
+    keyStoreType: PKCS12
+    keyAlias: tomcat
